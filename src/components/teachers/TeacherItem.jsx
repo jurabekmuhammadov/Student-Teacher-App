@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {useNavigate} from "react-router-dom"
 import PropTypes from "prop-types";
-import { openModal, deleteStudent } from '@/app/students/studentsSlice'; // Assuming this is where you have your deleteStudent action
+import {useNavigate} from "react-router-dom";
+import { openModal, deleteTeacher } from '@/app/teachers/teachersSlice'; // Assuming this is where you have your deleteStudent action
 
-const StudentItem = ({ info }) => {
-    const navigate = useNavigate()
+const TeacherItem = ({ info }) => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [confirmDelete, setConfirmDelete] = useState(false);
 
@@ -14,7 +14,7 @@ const StudentItem = ({ info }) => {
     };
 
     const handleConfirmDelete = () => {
-        dispatch(deleteStudent(info.id));
+        dispatch(deleteTeacher(info.id));
         setConfirmDelete(false);
         window.location.reload()
     };
@@ -23,9 +23,9 @@ const StudentItem = ({ info }) => {
         setConfirmDelete(false);
     };
 
-    const herTeacher = (group) => {
-        localStorage.setItem("studentGroup", group);
-        navigate("/her-teacher");
+    const herStudents = (group) => {
+        localStorage.setItem("teacherGroup", group);
+        navigate("/her-students");
     }   
 
     return (
@@ -47,16 +47,16 @@ const StudentItem = ({ info }) => {
                 </>
             ) : (
                 <button onClick={handleDelete} className="border-2 border-red-500 hover:text-red-500">
-                    Delete
+                    Delete 
                 </button>
             )}
-            <button onClick={() => herTeacher(info.group)} className="border-2 border-green-500 hover:text-red-500">Her teacher</button>
+            <button onClick={() => herStudents(info.group)} className="border-2 border-green-500 hover:text-red-500">Her students</button>
         </div>
     );
 };
 
-StudentItem.propTypes = {
+TeacherItem.propTypes = {
     info: PropTypes.object,
 }
 
-export default StudentItem;
+export default TeacherItem;

@@ -1,217 +1,216 @@
 {
-    "students": [
-        {
-            "id": "1",
-            "firstname": "Jurabek",
-            "lastname": "Muhammadov",
-            "group": "ReactJs N45"
-        },
-        {
-            "id": "2",
-            "firstname": "John",
-            "lastname": "Doe",
-            "group": "Angular N32",
-            "grou[": "Angular N32"
-        },
-        {
-            "id": "3",
-            "firstname": "Jane",
-            "lastname": "Smith",
-            "group": "VueJs N17"
-        },
-        {
-            "id": "4",
-            "firstname": "Alice",
-            "lastname": "Johnson",
-            "group": "ExpressJs N78"
-        },
-        {
-            "id": "5",
-            "firstname": "Bobb",
-            "lastname": "Williams",
-            "group": "VueJs N17"
-        },
-        {
-            "id": "6",
-            "firstname": "Emily",
-            "lastname": "Brown",
-            "group": "ReactJs N45"
-        },
-        {
-            "id": "7",
-            "firstname": "Michael",
-            "lastname": "Jones",
-            "group": "Angular N32"
-        },
-        {
-            "id": "8",
-            "firstname": "Sophia",
-            "lastname": "Garcia",
-            "group": "Angular N32"
-        },
-        {
-            "id": "9",
-            "firstname": "Matthew",
-            "lastname": "Martinez",
-            "group": "ReactJs N45"
-        },
-        {
-            "id": "10",
-            "firstname": "Olivia",
-            "lastname": "Hernandez",
-            "group": "ExpressJs N78"
-        },
-        {
-            "id": "11",
-            "firstname": "Daniel",
-            "lastname": "Lopez",
-            "group": "Angular N32"
-        },
-        {
-            "id": "12",
-            "firstname": "David",
-            "lastname": "Gonzalez",
-            "group": "VueJs N17"
-        },
-        {
-            "id": "13",
-            "firstname": "Ethan",
-            "lastname": "Wilson",
-            "group": "ReactJs N45"
-        },
-        {
-            "id": "14",
-            "firstname": "Mia",
-            "lastname": "Taylor",
-            "group": "ExpressJs N78"
-        },
-        {
-            "id": "15",
-            "firstname": "Isabella",
-            "lastname": "Anderson",
-            "group": "VueJs N17"
-        },
-        {
-            "id": "16",
-            "firstname": "Ava",
-            "lastname": "Thomas",
-            "group": "NextJs N1"
-        },
-        {
-            "id": "17",
-            "firstname": "Liam",
-            "lastname": "Hernandez",
-            "group": "Angular N32"
-        },
-        {
-            "id": "18",
-            "firstname": "Noah",
-            "lastname": "Nelson",
-            "group": "NextJs N1"
-        },
-        {
-            "id": "19",
-            "firstname": "Logan",
-            "lastname": "Roberts",
-            "group": "ReactJs N45"
-        },
-        {
-            "id": "20",
-            "firstname": "James",
-            "lastname": "Cook",
-            "group": "Angular N32"
-        },
-        {
-            "id": "21",
-            "firstname": "Benjamin",
-            "lastname": "Murphy",
-            "group": "VueJs N17"
-        },
-        {
-            "id": "22",
-            "firstname": "Elijah",
-            "lastname": "Rogers",
-            "group": "NextJs N1"
-        },
-        {
-            "id": "23",
-            "firstname": "Alexander",
-            "lastname": "Reed",
-            "group": "Angular N32"
-        },
-        {
-            "id": "24",
-            "firstname": "Evelyn",
-            "lastname": "Bell",
-            "group": "VueJs N17"
-        },
-        {
-            "id": "25",
-            "firstname": "Charlotte",
-            "lastname": "Perez",
-            "group": "ReactJs N45"
-        },
-        {
-            "id": "26",
-            "firstname": "Victoria",
-            "lastname": "Bailey",
-            "group": "NextJs N1"
-        },
-        {
-            "id": "27",
-            "firstname": "Gabriel",
-            "lastname": "Rivera",
-            "group": "VueJs N17"
-        },
-        {
-            "id": "28",
-            "firstname": "Madison",
-            "lastname": "Reyes",
-            "group": "NextJs N1"
-        },
-        {
-            "id": "29",
-            "firstname": "Samuel",
-            "lastname": "Russell",
-            "group": "Angular N32"
-        },
-        {
-            "id": "30",
-            "firstname": "Jack",
-            "lastname": "Cruz",
-            "group": "NextJs N1"
-        }
-    ],
-    "teachers": [
-        {
-            "id": "1",
-            "firstname": "Alexander",
-            "lastname": "Anderson",
-            "groups": ["VueJs N17"]
-        },
-        {
-            "id": "2",
-            "firstname": "Alice",
-            "lastname": "Bailey",
-            "groups": ["Angular N32"]
-        },
-        {
-            "id": "3",
-            "firstname": "Benjamin",
-            "lastname": "Cook",
-            "groups": ["ReactJs N45"]
-        },
-        {
-            "id": "4",
-            "firstname": "David",
-            "lastname": "Garcia",
-            "groups": ["NextJs N1"]
-        },
-        {
-            "id": "5",
-            "firstname": "Ethan",
-            "lastname": "Hernandez",
-            "groups": ["ExpressJs N78"]
-        }
-    ]
+  "students": [
+    {
+      "id": "1",
+      "firstname": "Jurabek",
+      "lastname": "Muhammadov",
+      "group": "ReactJs N45"
+    },
+    {
+      "id": "2",
+      "firstname": "John",
+      "lastname": "Doe",
+      "group": "Angular N32"
+    },
+    {
+      "id": "3",
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "4",
+      "firstname": "Alice",
+      "lastname": "Johnson",
+      "group": "ExpressJs N78"
+    },
+    {
+      "id": "5",
+      "firstname": "Bobb",
+      "lastname": "Williams",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "6",
+      "firstname": "Emily",
+      "lastname": "Brown",
+      "group": "ReactJs N45"
+    },
+    {
+      "id": "7",
+      "firstname": "Michael",
+      "lastname": "Jones",
+      "group": "Angular N32"
+    },
+    {
+      "id": "8",
+      "firstname": "Sophia",
+      "lastname": "Garcia",
+      "group": "Angular N32"
+    },
+    {
+      "id": "9",
+      "firstname": "Matthew",
+      "lastname": "Martinez",
+      "group": "ReactJs N45"
+    },
+    {
+      "id": "10",
+      "firstname": "Olivia",
+      "lastname": "Hernandez",
+      "group": "ExpressJs N78"
+    },
+    {
+      "id": "11",
+      "firstname": "Daniel",
+      "lastname": "Lopez",
+      "group": "Angular N32"
+    },
+    {
+      "id": "12",
+      "firstname": "David",
+      "lastname": "Gonzalez",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "13",
+      "firstname": "Ethan",
+      "lastname": "Wilson",
+      "group": "ReactJs N45"
+    },
+    {
+      "id": "14",
+      "firstname": "Mia",
+      "lastname": "Taylor",
+      "group": "ExpressJs N78"
+    },
+    {
+      "id": "15",
+      "firstname": "Isabella",
+      "lastname": "Anderson",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "16",
+      "firstname": "Ava",
+      "lastname": "Thomas",
+      "group": "NextJs N1"
+    },
+    {
+      "id": "17",
+      "firstname": "Liam",
+      "lastname": "Hernandez",
+      "group": "Angular N32"
+    },
+    {
+      "id": "18",
+      "firstname": "Noah",
+      "lastname": "Nelson",
+      "group": "NextJs N1"
+    },
+    {
+      "id": "19",
+      "firstname": "Logan",
+      "lastname": "Roberts",
+      "group": "ReactJs N45"
+    },
+    {
+      "id": "20",
+      "firstname": "James",
+      "lastname": "Cook",
+      "group": "Angular N32"
+    },
+    {
+      "id": "21",
+      "firstname": "Benjamin",
+      "lastname": "Murphy",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "22",
+      "firstname": "Elijah",
+      "lastname": "Rogers",
+      "group": "NextJs N1"
+    },
+    {
+      "id": "23",
+      "firstname": "Alexander",
+      "lastname": "Reed",
+      "group": "Angular N32"
+    },
+    {
+      "id": "24",
+      "firstname": "Evelyn",
+      "lastname": "Bell",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "25",
+      "firstname": "Charlotte",
+      "lastname": "Perez",
+      "group": "ReactJs N45"
+    },
+    {
+      "id": "26",
+      "firstname": "Victoria",
+      "lastname": "Bailey",
+      "group": "NextJs N1"
+    },
+    {
+      "id": "27",
+      "firstname": "Gabriel",
+      "lastname": "Rivera",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "28",
+      "firstname": "Madison",
+      "lastname": "Reyes",
+      "group": "NextJs N1"
+    },
+    {
+      "id": "29",
+      "firstname": "Samuel",
+      "lastname": "Russell",
+      "group": "Angular N32"
+    },
+    {
+      "id": "30",
+      "firstname": "Jack",
+      "lastname": "Cruz",
+      "group": "NextJs N1"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "1",
+      "firstname": "Alexander",
+      "lastname": "Anderson",
+      "group": "VueJs N17"
+    },
+    {
+      "id": "2",
+      "firstname": "Alice",
+      "lastname": "Bailey",
+      "group": "Angular N32"
+    },
+    {
+      "id": "3",
+      "firstname": "Benjamin",
+      "lastname": "Cook",
+      "group": "ReactJs N45"
+    },
+    {
+      "id": "4",
+      "firstname": "David",
+      "lastname": "Garcia",
+      "group": "NextJs N1"
+    },
+    {
+      "id": "5",
+      "firstname": "Ethan",
+      "lastname": "Hernandez",
+      "group": "ExpressJs N78"
+    }
+  ]
 }
