@@ -5,10 +5,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Teachers from "./components/teachers/Teachers"
 import HerStudents from "./components/her-students"
 import HerTeacher from "./components/her-teacher"
+import Navbar from "./components/ui/navbar"
 function App() {
   return (
     <BrowserRouter>
       <Provider store={store}>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Students />}/>
           <Route path="/teachers" element={<Teachers/>}/>

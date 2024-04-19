@@ -5,6 +5,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import StudentList from "./StudentList";
+import { Button } from "../ui/button";
+import { CirclePlus, CircleX, CheckCheck } from "lucide-react"
+import Select from "../ui/select";
 
 const Students = () => {
     const {
@@ -21,7 +24,7 @@ const Students = () => {
             })
         ),
     });
-    
+
     const { loading, error, students, modalOpen, selectedStudent } = useSelector((state) => state.students);
     let filteredStudents = [...students];
     const dispatch = useDispatch();
@@ -34,9 +37,9 @@ const Students = () => {
 
     const handleSearch = (e) => {
         setSearchedStudent(e.target.value.toLowerCase().trim())
-    } 
+    }
 
-    if(filterValue !== "Filter by group") {
+    if (filterValue !== "Filter by group") {
         filteredStudents = students.filter((student) => student.group === filterValue);
     }
 
@@ -48,7 +51,7 @@ const Students = () => {
         );
     }
 
-    
+
 
     useEffect(() => {
         dispatch(fetchStudents());
@@ -70,63 +73,81 @@ const Students = () => {
     };
 
     return (
-        <>
+        <div className="container">
             <div className="modal">
-                <form onSubmit={handleSubmit(onSubmit)} className={`m-6 flex gap-4 ${modalOpen ? "" : "hidden"}`}>
-                    <input
-                        defaultValue={selectedStudent?.firstname || ""}
-                        {...register("firstname")}
-                        className="border border-sky-500 outline-none p-2"
-                        placeholder="First Name"
-                    />
-                    {errors.firstname && <span className="text-red-500">{errors.firstname.message}</span>}
+                <form onSubmit={handleSubmit(onSubmit)} className={`my-6 flex flex-row justify-between items-end gap-10 ${modalOpen ? "" : "hidden"}`}>
+                    <div className="flex gap-6 items-center w-full">
+                        <div className="flex flex-col gap-2 w-1/3">
+                            <label htmlFor="firstname" className="text-sm">First Name</label>
+                            <input
+                                defaultValue={selectedStudent?.firstname || ""}
+                                {...register("firstname")}
+                                className="flex h-10 w-full rounded-md border border-gray-300 border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 "
+                                id="firstaname"
+                            />
+                            {errors.firstname && <span className="text-red-500">{errors.firstname.message}</span>}
+                        </div>
+                        <div className="flex flex-col gap-2 w-1/3">
+                            <label htmlFor="lastname" className="text-sm">Last Name</label>
+                            <input
+                                defaultValue={selectedStudent?.lastname || ""}
+                                {...register("lastname")}
+                                className="flex h-10 w-full rounded-md border border-gray-300 border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 "
+                                id="lastname"
+                            />
+                            {errors.lastname && <span className="text-red-500">{errors.lastname.message}</span>}
+                        </div>
+                        <div className="flex flex-col gap-1 justify-center w-1/3">
+                            <label htmlFor="group" className="text-left">Select a group</label>
+                            <select name="group" id="group" {...register("group")} className="w-full h-10 border-2 m-0 p-0">
+                                <option value="">Select Group</option>
+                                <option value="ReactJs N45">ReactJs N45</option>
+                                <option value="Angular N32">Angular N32</option>
+                                <option value="VueJs N17">VueJs N17</option>
+                                <option value="ExpressJs N78">ExpressJs N78</option>
+                                <option value="NextJs N1">NextJs N1</option>
+                            </select>
+                            {errors.group && <span className="text-red-500">{errors.group.message}</span>}
+                        </div>
+                    </div>
 
-                    <input
-                        defaultValue={selectedStudent?.lastname || ""}
-                        {...register("lastname")}
-                        className="border border-sky-500 outline-none p-2"
-                        placeholder="Last Name"
-                    />
-                    {errors.lastname && <span className="text-red-500">{errors.lastname.message}</span>}
-
-                    <select name="group" id="group" {...register("group")}>
-                        <option value="">Select Group</option>
-                        <option value="ReactJs N45">ReactJs N45</option>
-                        <option value="Angular N32">Angular N32</option>
-                        <option value="VueJs N17">VueJs N17</option>
-                        <option value="ExpressJs N78">ExpressJs N78</option>
-                        <option value="NextJs N1">NextJs N1</option>
-                    </select>
-                    {errors.group && <span className="text-red-500">{errors.group.message}</span>}
-
-                    <button type="submit">{selectedStudent ? "Edit Student" : "Submit"}</button>
-                    <button type="button" onClick={() => dispatch(closeModal())}>
-                        Close
-                    </button>
+                    <div className="flex items-center gap-2 h-full">
+                        <Button type="submit" className="bg-green-600 hover:bg-green-500 text-white text-sm rounded rounded-xl font-bold flex gap-2 items-center">
+                            <CheckCheck size={16} />
+                            {selectedStudent ? "Edit Student" : "Submit"}
+                        </Button>
+                        <Button onClick={() => dispatch(closeModal())} type="button" className="bg-slate-400 hover:bg-slate-500  text-white text-sm rounded rounded-xl font-bold flex gap-2 items-center">
+                            <CircleX />
+                            Cancel
+                        </Button>
+                    </div>
                 </form>
             </div>
 
-            <button onClick={() => dispatch(openModal())} className="border border-black m-6">
-                Add Student
-            </button>
+            <div className="top-actions flex items-center flex-row-reverse justify-between my-6">
+                <Button onClick={() => dispatch(openModal())} className="bg-green-600 hover:bg-green-500 text-white text-sm rounded rounded-xl font-bold flex gap-2 items-center">
+                    <CirclePlus size={16} />
+                    Add Student
+                </Button>
 
-            <select name="filter" id="filter" onChange={handleFilter}>
-                <option defaultValue="Filter by group">Filter by group</option>
-                <option value="ReactJs N45">ReactJs N45</option>
-                <option value="Angular N32">Angular N32</option>
-                <option value="VueJs N17">VueJs N17</option>
-                <option value="ExpressJs N78">ExpressJs N78</option>
-                <option value="NextJs N1">NextJs N1</option>
-            </select>
-
-            <input onChange={handleSearch} className="ml-4 border border-black outline-none" type="text" placeholder="Search students..." />
+                <div className="grid w-full max-w-sm items-center gap-1.5">
+                    <input
+                        type={"text"}
+                        className={
+                            "flex h-10 w-full rounded-md border border-gray-300 border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 "
+                        }
+                        onChange={handleSearch} placeholder="Search students..."
+                    />
+                </div>
+                <Select value={filterValue} onChange={handleFilter} options={["Filter by group", "ReactJs N45", "Angular N32", "VueJs N17", "ExpressJs N78", "NextJs N1"]} />
+            </div>
 
             {loading && <h1>Loading....</h1>}
             {error && <h1>{error.message}</h1>}
             {filteredStudents.length > 0 && (
                 <StudentList students={filteredStudents} />
             )}
-        </>
+        </div>
     );
 };
 
